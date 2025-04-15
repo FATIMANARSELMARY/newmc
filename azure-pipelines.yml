@@ -7,14 +7,14 @@ trigger:
 - master
 
 pool:
-  name: modelagent
+  name: 'ubuntu-latest'
 
 steps:
 - checkout: self
 - task: Maven@3
   inputs:
     mavenPomFile: 'jiffy/pom.xml'
-    goals: 'package _Dskiptests'
+    goals: 'mvn clean install'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'Path'
     jdkDirectory: 'C:/Program Files/Java/jdk-21'
