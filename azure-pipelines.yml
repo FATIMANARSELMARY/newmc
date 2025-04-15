@@ -14,7 +14,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'jiffy/pom.xml'
-    goals: 'package _DSKIPTESTS'
+    goals: 'package _Dskiptests'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'Path'
     jdkDirectory: 'C:/Program Files/Java/jdk-21'
